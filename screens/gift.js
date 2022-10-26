@@ -3,30 +3,17 @@ import { StyleSheet, Image, TouchableOpacity, Text } from "react-native";
 import { Layout } from "@ui-kitten/components";
 import Icon from "react-native-vector-icons/Octicons";
 
-const HomeScreen = ({ navigation }) => {
+const GiftScreen = ({ navigation }) => {
     const navigate = () => {
         navigation.navigate("ViewAll");
     };
     return (
         <Layout style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-            <Layout style={styles.header}>
-                <Layout styles={styles.infoBar}>
-                    <Layout style={styles.avatar}></Layout>
-                    <Layout style={styles.info}>
-                        <Text style={styles.name}>Name</Text>
-                        <Text style={styles.role}>Role</Text>
-                    </Layout>
-                </Layout>
-                <Layout style={styles.showWindow}>
-                    <Layout style={styles.window}></Layout>
-                    <Layout style={styles.window}></Layout>
-                </Layout>
-            </Layout>
-            <Layout style={styles.content}></Layout>
+            <Text>SEARCH!</Text>
         </Layout>
     );
 };
-export default HomeScreen;
+export default GiftScreen;
 
 const styles = StyleSheet.create({
     container: {

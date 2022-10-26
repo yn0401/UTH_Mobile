@@ -1,58 +1,16 @@
 import React from "react";
-import { Text, StyleSheet } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
+import { StyleSheet } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Icon from "react-native-vector-icons/Octicons";
 import Ant from "react-native-vector-icons/AntDesign";
 import * as eva from "@eva-design/eva";
-import { Layout } from "@ui-kitten/components";
+import { Layout,Text } from "@ui-kitten/components";
+import HomeScreen from "./home";
+import GiftScreen from "./gift";
+import HistoryScreen from "./history";
+import ProfileScreen from "./profile";
 
 const Tab = createBottomTabNavigator();
-
-function HomeScreen() {
-  return (
-    <Layout style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Layout style={styles.header}>
-        <Layout styles={styles.infoBar}>
-          <Layout style={styles.avatar}></Layout>
-          <Layout style={styles.info}>
-            <Text style={styles.name}>Name</Text>
-            <Text style={styles.role}>Role</Text>
-          </Layout>
-        </Layout>
-        <Layout style={styles.showWindow}>
-          <Layout style={styles.window}></Layout>
-          <Layout style={styles.window}></Layout>
-        </Layout>
-      </Layout>
-      <Layout style={styles.content}></Layout>
-    </Layout>
-  );
-}
-
-function ExchangeScreen() {
-  return (
-    <Layout style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>SEARCH!</Text>
-    </Layout>
-  );
-}
-
-function HistoryScreen() {
-  return (
-    <Layout style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>ADD!</Text>
-    </Layout>
-  );
-}
-
-function ProfileScreen() {
-  return (
-    <Layout style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>PROFILE!</Text>
-    </Layout>
-  );
-}
 
 const ViewAll = () => {
   return (
@@ -62,7 +20,7 @@ const ViewAll = () => {
         tabBarShowLabel: false,
         tabBarInactiveTintColor: "#c2c2c2",
         tabBarActiveTintColor: "#fff",
-        tabBarStyle: { backgroundColor: "#426ef0", borderTopWidth: "none" },
+        tabBarStyle: { backgroundColor: "#426ef0" },
       }}
     >
       <Tab.Screen
@@ -76,7 +34,7 @@ const ViewAll = () => {
       />
       <Tab.Screen
         name="Exchange"
-        component={ExchangeScreen}
+        component={GiftScreen}
         options={{
           tabBarIcon: ({ size, color }) => (
             <Icon name="gift" color={color} size={size} />
