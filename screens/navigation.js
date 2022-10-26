@@ -5,13 +5,14 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { ApplicationProvider } from "@ui-kitten/components";
 import LoginScreen from "./login";
 import ViewAll from "./viewAll";
+import MainScreen from "./viewAll";
 
 const { Navigator, Screen } = createNativeStackNavigator();
 
 const HomeNavigator = () => (
   <Navigator screenOptions={{ headerShown: false }}>
     <Screen name="Home" component={LoginScreen} />
-    <Screen name="ViewAll" component={ViewAll} />
+    <Screen name="Main" component={MainScreen} />
   </Navigator>
 );
 
