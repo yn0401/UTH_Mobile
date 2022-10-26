@@ -5,7 +5,7 @@ import Icon from "react-native-vector-icons/Octicons";
 
 const LoginScreen = ({ navigation }) => {
   const navigate = () => {
-    navigation.navigate("ViewAll");
+    navigation.navigate("Main");
   };
 
   return (
@@ -23,6 +23,12 @@ const LoginScreen = ({ navigation }) => {
       <Layout>
         <TouchableOpacity onPress={navigate} style={styles.button}>
           <Text style={styles.btn}>Sign in</Text>
+          <Icon name="arrow-right" style={styles.icon} />
+        </TouchableOpacity>
+      </Layout>
+      <Layout style={{marginTop: 20}}>
+        <TouchableOpacity onPress={navigate} style={styles.button}>
+          <Text style={styles.btn}>Guest</Text>
           <Icon name="arrow-right" style={styles.icon} />
         </TouchableOpacity>
       </Layout>
